@@ -1,0 +1,183 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+header {
+  background: #00264d;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-weight: 800;
+  text-decoration: none;
+  color: #fff;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  background: #004080;
+  border-radius: 5px;
+}
+
+.vision-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.vision-page h1 {
+  color: #00264d;
+  margin-bottom: 15px;
+}
+
+.vision-page p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.vision-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.vision-boxes .box {
+  background: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.vision-boxes .box:hover {
+  transform: translateY(-5px);
+}
+
+.vision-boxes .box i {
+  font-size: 40px;
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.vision-boxes .box h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.more-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: #004080;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.more-btn:hover {
+  background: #0066cc;
+}
+
+footer {
+  background: #00264d;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+
+/* ===== HEADER FIX ===== */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #004080;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* اللوجو */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+
+.logo-img {
+  width: 45px;
+}
+
+/* زرار المنيو */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.menu-toggle:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+  }
+
+  .main-menu {
+    flex-direction: column;
+    background: #003366;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .main-menu.active {
+    max-height: 600px;
+  }
+}
